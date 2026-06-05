@@ -24,7 +24,7 @@ export const botConfig = {
     // 5 = Competing
     activities: [
       {
-        // Text users will see (example: "Playing /help | Titan Bot").
+        // Text users will see (example: "Playing /help | Malta SMP").
         name: "Playing Malta SMP",
         // Activity type number (0 = Playing).
         type: 0, 
@@ -64,7 +64,7 @@ export const botConfig = {
     // Embed colors by application status.
     statusColors: {
       pending: "#FFA500",
-      approved: "#00FF00",
+      approved: "#1DB954",
       denied: "#FF0000",
     },
 
@@ -87,15 +87,15 @@ export const botConfig = {
   // IMPORTANT: This is the SINGLE SOURCE OF TRUTH for all bot colors
   embeds: {
     colors: {
-      // Main brand colors.
-      primary: "#336699", 
-      secondary: "#2F3136", 
+      // Main brand colors - Professional Light Glowing Green Theme
+      primary: "#1DB954", 
+      secondary: "#1ed760", 
 
       // Standard status colors for success/error/warning/info messages.
-      success: "#57F287", 
+      success: "#1ed760", 
       error: "#ED4245", 
       warning: "#FEE75C", 
-      info: "#3498DB", 
+      info: "#1DB954", 
 
       // Neutral utility colors.
       light: "#FFFFFF",
@@ -104,7 +104,7 @@ export const botConfig = {
 
       // Discord-style palette shortcuts.
       blurple: "#5865F2",
-      green: "#57F287",
+      green: "#1ed760",
       yellow: "#FEE75C",
       fuchsia: "#EB459E",
       red: "#ED4245",
@@ -112,31 +112,31 @@ export const botConfig = {
 
       // Feature-specific colors.
       giveaway: {
-        active: "#57F287",
+        active: "#1ed760",
         ended: "#ED4245",
       },
       ticket: {
-        open: "#57F287",
+        open: "#1ed760",
         claimed: "#FAA61A",
         closed: "#ED4245",
-        pending: "#99AAB5",
+        pending: "#1DB954",
       },
-      economy: "#F1C40F",
+      economy: "#1ed760",
       birthday: "#E91E63",
-      moderation: "#9B59B6",
+      moderation: "#1DB954",
 
       // Ticket priority color mapping.
       priority: {
         none: "#95A5A6",
-        low: "#3498db",
-        medium: "#2ecc71",
+        low: "#1DB954",
+        medium: "#1ed760",
         high: "#f1c40f",
         urgent: "#e74c3c",
       },
     },
     footer: {
       // Default footer text used in bot embeds.
-      text: "Titan Bot",
+      text: "Malta SMP",
       // Footer icon URL (null = no icon).
       icon: null,
     },
@@ -215,12 +215,12 @@ export const botConfig = {
       },
       low: {
         emoji: "🟢",
-        color: "#2ECC71",
+        color: "#1ed760",
         label: "Low",
       },
       medium: {
         emoji: "🟡",
-        color: "#F1C40F",
+        color: "#1DB954",
         label: "Medium",
       },
       high: {
@@ -431,6 +431,15 @@ export const botConfig = {
   },
 
   // =========================
+  // SUPPORT & LINKS
+  // =========================
+  support: {
+    discordServer: "https://discord.gg/rBUZUaXmwY",
+    website: "https://discord.gg/rBUZUaXmwY",
+    github: "https://discord.gg/rBUZUaXmwY",
+  },
+
+  // =========================
   // FEATURE TOGGLES
   // =========================
   // Set any feature to `false` to disable it globally.
@@ -543,7 +552,3 @@ export function getRandomColor() {
 }
 
 export default botConfig;
-
-
-
-
