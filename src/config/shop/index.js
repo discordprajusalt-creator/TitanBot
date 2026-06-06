@@ -1,15 +1,11 @@
 
-
-
-
-
 import { shopItems, getItemById, getItemsByType, getItemPrice, validatePurchase } from './items.js';
 import { botConfig } from '../bot.js';
 
 const { currency } = botConfig.economy;
 
 export const shopConfig = {
-    name: 'TitanBot Shop',
+    name: 'Malta SMP Shop',
     currency: currency.name,
     currencyName: currency.name,
     currencyNamePlural: currency.namePlural || `${currency.name}s`,
@@ -47,14 +43,14 @@ export const shopConfig = {
     ],
     
     transaction: {
-cooldown: 1000,
-maxQuantity: 10,
-confirmTimeout: 30000,
+        cooldown: 1000,
+        maxQuantity: 10,
+        confirmTimeout: 30000,
         
         refundPolicy: {
             enabled: true,
-window: 300000,
-fee: 0.1
+            window: 300000,
+            fee: 0.1
         }
     },
     
@@ -65,19 +61,19 @@ fee: 0.1
         showAffordability: true,
         
         colors: {
-primary: '#5865F2',
-success: '#43B581',
-error: '#F04747',
-warning: '#FAA61A',
-info: '#00B0F4',
+            primary: '#1DB954',
+            success: '#1ed760',
+            error: '#F04747',
+            warning: '#FAA61A',
+            info: '#1DB954',
             
             rarity: {
-common: '#99AAB5',
-uncommon: '#2ECC71',
-rare: '#3498DB',
-epic: '#9B59B6',
-legendary: '#F1C40F',
-mythic: '#E74C3C'
+                common: '#99AAB5',
+                uncommon: '#1ed760',
+                rare: '#1DB954',
+                epic: '#9B59B6',
+                legendary: '#F1C40F',
+                mythic: '#E74C3C'
             }
         },
         
@@ -100,8 +96,8 @@ mythic: '#E74C3C'
     events: {
         restock: {
             enabled: true,
-interval: 86400000,
-announcementChannel: null,
+            interval: 86400000,
+            announcementChannel: null,
             message: '🛒 **Shop Restocked!** New items are now available!'
         },
         
@@ -109,8 +105,8 @@ announcementChannel: null,
             enabled: true,
             schedule: [
                 {
-day: 0,
-discount: 0.2,
+                    day: 0,
+                    discount: 0.2,
                     message: '🔥 **Weekend Sale!** 20% off all items!'
                 },
             ]
@@ -125,11 +121,6 @@ export {
     getItemPrice,
     validatePurchase
 };
-
-
-
-
-
 
 
 
@@ -154,7 +145,7 @@ export function getCurrentPrice(itemId, { quantity = 1, userData = null } = {}) 
         }
         
         if (quantity >= 10) {
-discount += 0.1;
+            discount += 0.1;
         }
     }
     
@@ -162,8 +153,6 @@ discount += 0.1;
     
     return Math.floor(basePrice * (1 - discount));
 }
-
-
 
 
 
@@ -182,8 +171,6 @@ export function getCategoryForItem(itemType) {
 
 
 
-
-
 export function getItemsInCategory(categoryId) {
     const category = shopConfig.categories.find(cat => cat.id === categoryId);
     if (!category) return [];
@@ -192,7 +179,4 @@ export function getItemsInCategory(categoryId) {
         category.itemTypes.includes(item.type)
     );
 }
-
-
-
 
